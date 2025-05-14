@@ -5,23 +5,26 @@ using namespace std;
 
 int main()
 {
+    // Se declaran las variables que se van a usar
     int Edad = 0, Usuario = 0, Dispositivos;
-    double Compra = 0, Dinero = 1000, SaldoR = 0, CompraN = 0,SaldoRr = 0;
+    double Compra = 0, Dinero = 1000, SaldoR = 0, CompraN = 0, SaldoRr = 0;
+
+    // Se le pide al usuario la edad
     cout << "Porfavor ingrese su edad" << endl;
     cin >> Edad;
-
+    // Se valora que si el usuario tiene menos de 16 años no puede comprar
     if (Edad < 16)
     {
         cout << "No puede seguir ya que no tiene la edad suficiente" << endl;
         return 0;
     }
-
+    // Se le pide al ususario que tipo de usuario es
     cout << "Porfavor digite que tipo de usuario es:" << endl;
     cout << "Estudiante=1" << endl;
     cout << "Profesor=2" << endl;
     cout << "Ver todos=3" << endl;
     cin >> Usuario;
-
+    // Se dice que si usuario es igual a 1 entonces se le mostrara la interfaz de Estudiante
     if (Usuario == 1)
     {
         cout << "Su descuento como estudiante es de 20%" << endl;
@@ -39,6 +42,7 @@ int main()
             CompraN = (900 - Compra);
             SaldoR = (CompraN - Dinero);
             SaldoRr = (SaldoR * -1);
+            // Se comprueba si el dinero que tiene el usuario es suficiente
             if (Compra > Dinero)
             {
                 cout << "Su compra no se puede realizar por saldo insuficiente intente mas tarde" << endl;
@@ -56,6 +60,7 @@ int main()
             CompraN = (600 - Compra);
             SaldoR = (CompraN - Dinero);
             SaldoRr = (SaldoR * -1);
+            // Se comprueba si el dinero que tiene el usuario es suficiente
             if (Compra > Dinero)
             {
                 cout << "Su compra no se puede realizar por saldo insuficiente intente mas tarde" << endl;
@@ -73,6 +78,7 @@ int main()
             CompraN = (700 - Compra);
             SaldoR = (CompraN - Dinero);
             SaldoRr = (SaldoR * -1);
+            // Se comprueba si el dinero que tiene el usuario es suficiente
             if (Compra > Dinero)
             {
                 cout << "Su compra no se puede realizar por saldo insuficiente intente mas tarde" << endl;
@@ -92,6 +98,7 @@ int main()
             break;
         }
     }
+    // Se dice que si usuario es igual a 1 entonces se le mostrara la interfaz de Profesional
     else if (Usuario == 2)
     {
         cout << "Su descuento como Profesional es de 10%" << endl;
@@ -109,6 +116,7 @@ int main()
             CompraN = (1500 - Compra);
             SaldoR = (CompraN - Dinero);
             SaldoRr = (SaldoR * -1);
+            // Se comprueba si el dinero que tiene el usuario es suficiente
             if (CompraN > Dinero)
             {
                 cout << "Su compra no se puede realizar por saldo insuficiente intente mas tarde" << endl;
@@ -126,6 +134,7 @@ int main()
             CompraN = (1200 - Compra);
             SaldoR = (CompraN - Dinero);
             SaldoRr = (SaldoR * -1);
+            // Se comprueba si el dinero que tiene el usuario es suficiente
             if (CompraN > Dinero)
             {
                 cout << "Su compra no se puede realizar por saldo insuficiente intente mas tarde" << endl;
@@ -143,6 +152,7 @@ int main()
             CompraN = (2000 - Compra);
             SaldoR = (CompraN - Dinero);
             SaldoRr = (SaldoR * -1);
+            // Se comprueba si el dinero que tiene el usuario es suficiente
             if (CompraN > Dinero)
             {
                 cout << "Su compra no se puede realizar por saldo insuficiente intente mas tarde" << endl;
@@ -162,7 +172,7 @@ int main()
             break;
         }
     }
-
+    // Si es igual a 3 entonces se le mostara todo lo que se le enseña a estudiantes como a profesionales
     else if (Usuario == 3)
     {
         cout << "Seleccione que desea" << endl;
